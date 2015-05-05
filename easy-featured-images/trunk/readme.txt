@@ -24,6 +24,15 @@ function my_post_type_images( $post_types ) {
     unset( $post_types['page'] );
 }`
 
+As of 1.2.0 the plugin has an `efi/settings` filter which allows developers to change some settings. For now the only setting available is `show_thumbnail_preview` which can be set to true or false.
+
+`add_filter( 'efi/settings', 'my_efi_settings' );
+function my_efi_settings( $settings ) {
+    $settings['show_thumbnail_preview'] = false;
+    return $settings
+}`
+
+
 
 = Thanks =
 
@@ -50,6 +59,10 @@ If you are having trouble, take a look at the [Managing Plugins](http://codex.wo
 2. WooCommerce Support
 
 == Changelog ==
+
+= 1.2.0 (2014-05-05) =
+* Added the efi/settings filter which allows plugins/themes to overwrite basic settings. For now this is just the usage of the medium size image popout.
+* Recoded the plugin in an OOP fashion
 
 = 1.1.5 (2015-04-30) =
 * Fixed a bug that may have prevented images working for some custom post types

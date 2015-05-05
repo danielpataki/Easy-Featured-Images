@@ -38,6 +38,17 @@ function my_post_type_images( $post_types ) {
 }
 ```
 
+As of 1.2.0 the plugin has an `efi/settings` filter which allows developers to change some settings. For now the only setting available is `show_thumbnail_preview` which can be set to true or false.
+
+```
+add_filter( 'efi/settings', 'my_efi_settings' );
+function my_efi_settings( $settings ) {
+    $settings['show_thumbnail_preview'] = false;
+    return $settings
+}
+```
+
+
 # Want To Help?
 
 If you like the plugin and you like helping others out there are a few things you can do:
