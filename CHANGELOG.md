@@ -1,4 +1,4 @@
-### 1.2.0 (2014-05-05)
+### 1.2.0 (2015-05-05)
 - Added the efi/settings filter which allows plugins/themes to overwrite basic settings. For now this is just the usage of the medium size image popout.
 - Recoded the plugin in an OOP fashion
 
